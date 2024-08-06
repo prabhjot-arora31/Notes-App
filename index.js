@@ -37,7 +37,7 @@ app.use(
     secret: process.env.express_session,
    cookie: {
     secure: true, // Set to true in production if using HTTPS
-     sameSite: 'None', // Allow cross-origin cookies
+     sameSite: 'lax', // Allow cross-origin cookies
     }, // Set to true if using HTTPS
   })
 );
@@ -118,7 +118,7 @@ app.post("/login", async (req, res) => {
          maxAge: 3600000, // 1 hour
          httpOnly: false, // JavaScript can access this cookie
        secure: true, // Set to true if using HTTPS
-         sameSite: 'None', // Allow cross-origin cookies
+         sameSite: 'lax', // Allow cross-origin cookies
         
       });
       res.json({ msg: "Login success", user: user._id });
