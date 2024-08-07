@@ -25,7 +25,7 @@ app.use(cookieParser()); // Uncomment if using cookies
 //  }));
 app.use(
   cors({
-   origin: [ 'https://notes-app-3112.netlify.app', "https://notes-app-3112.vercel.app"],
+   origin: [ 'https://notes-app-3112.netlify.app', "https://notes-app-3112.vercel.app",'http://localhost:5173'],
    credentials: true,
   })
 );
